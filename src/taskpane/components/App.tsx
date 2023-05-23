@@ -16,7 +16,6 @@ export interface AppState {
 }
 
 export default class App extends React.Component<AppProps, AppState> {
-
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -112,9 +111,7 @@ export default class App extends React.Component<AppProps, AppState> {
       <div className="ms-welcome">
         <Header logo={require("./../../../assets/built_min_logo.png")} title={this.props.title} message="Welcome" />
         <HeroList message="" items={this.state.listItems}>
-          <p className="ms-font-l">
-            Modify the source files, then try.
-          </p>
+          <p className="ms-font-l">Modify the source files, then try.</p>
           <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
             Highlight Cell
           </DefaultButton>
