@@ -44,7 +44,6 @@ export default class App extends React.Component<AppProps, AppState> {
         range.format.fill.color = "yellow";
 
         await context.sync();
-        console.log(`The range address was ${range.address}.`);
       });
     } catch (error) {
       console.error(error);
@@ -85,9 +84,9 @@ export default class App extends React.Component<AppProps, AppState> {
 
   alert = async () => {
     await Excel.run(async (context) => {
-      Office.context.ui.displayDialogAsync("https://localhost:3000/dialogbox.html", {
+      Office.context.ui.displayDialogAsync("https://localhost:3001", {
         height: 30,
-        width: 20,
+        width: 60,
         displayInIframe: true,
       });
       await context.sync();

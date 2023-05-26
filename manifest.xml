@@ -11,6 +11,8 @@
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
+    <!--Add React application URLs-->
+    <AppDomain>https://localhost:3001</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -36,7 +38,6 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
-          <!-- <FunctionFile resid="Commands.Url"/> -->
           <FunctionFile resid="Taskpane.Url" />
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <CustomTab id="ShareTime">
